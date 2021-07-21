@@ -102,3 +102,8 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Hapi
+dist/
+.vscode/
+request.rest

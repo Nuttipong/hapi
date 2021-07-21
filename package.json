@@ -1,0 +1,43 @@
+{
+  "name": "hapi",
+  "version": "1.0.0",
+  "description": "Building Web Applications with hapi",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "npm run build && nodemon src/server.js --exec babel-node",
+    "build": "rimraf dist/ && babel src/server.js --out-dir dist --ignore src/**/*.spec.js,src/**/*.test.js --source-maps inline",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nuttipong/hapi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nuttipong/hapi/issues"
+  },
+  "homepage": "https://github.com/Nuttipong/hapi#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@hapi/hapi": "^20.1.5",
+    "@hapi/inert": "^6.0.3",
+    "@hapi/vision": "^6.1.0",
+    "boom": "^7.3.0",
+    "handlebars": "^4.7.7",
+    "hapi-swagger": "^14.2.1",
+    "joi": "^17.4.1",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.12",
+    "rimraf": "^3.0.2"
+  }
+}

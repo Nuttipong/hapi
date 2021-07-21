@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>hapi Greetings</title>
+    <link rel="stylesheet" href="/assets/css/stylesheet.css" />
+  </head>
+  <body>
+    <div style="float: left; margin-bottom: 2%">
+      <h1>Search: {{vm.q}}</h1>
+    </div>
+
+    <div style="width: 100%; float: left">
+      <div style="float: left; margin-bottom: 5%">
+        <h3>Result:</h3>
+        <table style="width: 500px">
+          <tr>
+            <th>id</th>
+            <th>node_id</th>
+            <th>name</th>
+            <th>full_name</th>
+          </tr>
+          {{#each vm.items}}
+          <tr>
+            <th>{{ id }}</th>
+            <th>{{ node_id }}</th>
+            <th>{{ name }}</th>
+            <th>{{ full_name }}</th>
+          </tr>
+          {{/each}}
+        </table>
+      </div>
+    </div>
+
+    <div class="pagination">
+      {{#if vm.first}}
+      <a href="{{vm.first.url}}">&laquo;</a>
+      {{/if}} {{#if vm.prev}}
+      <a href="{{vm.prev.url}}">&lt;</a>
+      {{/if}} {{#each vm.ranges}} {{link page pageUrl ../vm.page "active"}}
+      {{/each}} {{#if vm.next}}
+      <a href="{{vm.next.url}}">&gt;</a>
+      {{/if}} {{#if vm.last}}
+      <a href="{{vm.last.url}}">&raquo;</a>
+      {{/if}}
+    </div>
+  </body>
+</html>
