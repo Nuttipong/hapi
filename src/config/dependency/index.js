@@ -2,12 +2,15 @@ import HapiSwagger from "hapi-swagger";
 import Vision from "@hapi/vision";
 import Inert from "@hapi/inert";
 import Handlebars from "handlebars";
+import Path from "path";
+const viewsPath = Path.resolve(__dirname);
 
-const configSwagger = () => {
+export const configPlugin = () => {
   return [
-    Inert,
     Vision,
+    Inert,
     {
+      basePath: "/v1/",
       plugin: HapiSwagger,
       options: {
         info: {
@@ -15,12 +18,9 @@ const configSwagger = () => {
           version: "1.0.0",
         },
       },
+      jsonEditor: true,
     },
   ];
-};
-
-export const configPlugin = () => {
-  return [Vision, Inert, configSwagger()];
 };
 
 export const configView = () => {
@@ -28,7 +28,8 @@ export const configView = () => {
     engines: {
       html: Handlebars,
     },
-    path: "./src/templates",
-    helpersPath: "./src/templates/helpers",
+    path: Path.resolve(viewsPath, "../../templates"),
+    helpersPath: Path.resolve(viewsPath, "../../templates/helpers"),
+    partialsPath: Path.resolve(viewsPath, "../../templates/partials"),
   };
 };

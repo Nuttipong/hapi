@@ -30,17 +30,6 @@
       </div>
     </div>
 
-    <div class="pagination">
-      {{#if vm.first}}
-      <a href="{{vm.first.url}}">&laquo;</a>
-      {{/if}} {{#if vm.prev}}
-      <a href="{{vm.prev.url}}">&lt;</a>
-      {{/if}} {{#each vm.ranges}} {{link page pageUrl ../vm.page "active"}}
-      {{/each}} {{#if vm.next}}
-      <a href="{{vm.next.url}}">&gt;</a>
-      {{/if}} {{#if vm.last}}
-      <a href="{{vm.last.url}}">&raquo;</a>
-      {{/if}}
-    </div>
+    {{> paging this}}
   </body>
 </html>

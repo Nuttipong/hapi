@@ -1,6 +1,6 @@
 export class SearchController {
-  constructor(ctx) {
-    this.searchService = ctx.searchService;
+  constructor(factory) {
+    this.factory = factory;
   }
 
   searchHandler = async (req, h) => {
@@ -11,18 +11,7 @@ export class SearchController {
       range: req.query.range || 10,
     };
 
-    const { total_count, items, next, prev, ranges, last, first } =
-      await this.searchService.fetch(dto);
-    const vm = {
-      total_count: total_count || 0,
-      items: items || [],
-      next,
-      prev,
-      ranges: ranges || [],
-      last,
-      first,
-      ...dto,
-    };
+    const vm = await this.factory.create(dto);
     return h.view("search", { vm });
   };
 }

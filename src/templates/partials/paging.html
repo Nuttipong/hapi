@@ -1,0 +1,12 @@
+<div class="pagination">
+  {{#with vm.pagination}} {{#if first}}
+  <a href="{{first.pageUrl}}">&laquo;</a>
+  {{/if}} {{#if prev}}
+  <a href="{{prev.pageUrl}}">&lt;</a>
+  {{/if}} {{#each ranges}} {{link page pageUrl ../../vm.page "active"}}
+  {{/each}} {{#if next}}
+  <a href="{{next.pageUrl}}">&gt;</a>
+  {{/if}} {{#if last}}
+  <a href="{{last.pageUrl}}">&raquo;</a>
+  {{/if}} {{/with}}
+</div>

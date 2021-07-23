@@ -4,15 +4,7 @@
   "retainLines": true,
   "env": {
     "test": {
-      "plugins": [
-        "@babel/plugin-transform-runtime",
-        [
-          "transform-runtime",
-          {
-            "regenerator": true
-          }
-        ]
-      ]
+      "plugins": ["@babel/plugin-transform-runtime"]
     }
   }
 }

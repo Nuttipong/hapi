@@ -1,7 +1,7 @@
 import "@babel/polyfill";
 import Hapi from "@hapi/hapi";
-import { configPlugin, configView } from "./config/dependency/index";
-import Routes from "./config/route";
+import { configPlugin, configView } from "./config/dependency";
+import { createRoutes } from "./config/route";
 import { Logger } from "./common/logger";
 
 const logger = new Logger();
@@ -26,7 +26,7 @@ server.ext("onPreResponse", (req, res) => {
 (async () => {
   try {
     await server.register(configPlugin());
-    server.route(Routes);
+    server.route(createRoutes());
     server.views(configView());
 
     await server.start();

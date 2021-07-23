@@ -106,4 +106,4 @@ dist
 # Hapi
 dist/
 .vscode/
-request.rest
+

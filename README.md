@@ -5,10 +5,11 @@ Building Web Applications with hapi
 ## TODO
 
 1. Setup hapi and dependencies
-2. Build project structure with Clean Architecture
+2. Build project structure with MVC pattern
    - Apply SOLID principle
    - Apply CQRS principle
    - Apply Resilience principle
+   - Apply Design pattern
 3. Setup unit test
 4. Tooling
    - Swagger
