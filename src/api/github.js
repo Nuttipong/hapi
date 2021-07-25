@@ -21,21 +21,13 @@ export class GitHubApi {
     return resp;
   }
 
-  buildRequest(url, method, queries, options, payload) {
+  buildRequest(url, method, queries, options) {
     const headers = Object.assign(this.defaultHeaders, options);
     const request = {
       method: method,
       url: this.buildUrl(url, queries),
       headers: headers,
     };
-
-    if (payload) {
-      request = {
-        ...request,
-        payload,
-      };
-    }
-
     return request;
   }
 

@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paging partial should always render with pagination model 1`] = `
+"<div class=\\"pagination\\">
+      <a href=\\"#\\" class=\\"active\\">1</a>
+   <a href=\\"http://localhost:3000/search?q&#x3D;nodejs&amp;page&#x3D;2&amp;per_page&#x3D;10&amp;range&#x3D;10\\">2</a>
+   <a href=\\"http://localhost:3000/search?q&#x3D;nodejs&amp;page&#x3D;3&amp;per_page&#x3D;10&amp;range&#x3D;10\\">3</a>
+   <a href=\\"http://localhost:3000/search?q&#x3D;nodejs&amp;page&#x3D;4&amp;per_page&#x3D;10&amp;range&#x3D;10\\">4</a>
+   <a href=\\"http://localhost:3000/search?q&#x3D;nodejs&amp;page&#x3D;5&amp;per_page&#x3D;10&amp;range&#x3D;10\\">5</a>
+   <a href=\\"http://localhost:3000/search?q&#x3D;nodejs&amp;page&#x3D;6&amp;per_page&#x3D;10&amp;range&#x3D;10\\">6</a>
+   <a href=\\"http://localhost:3000/search?q&#x3D;nodejs&amp;page&#x3D;7&amp;per_page&#x3D;10&amp;range&#x3D;10\\">7</a>
+   <a href=\\"http://localhost:3000/search?q&#x3D;nodejs&amp;page&#x3D;8&amp;per_page&#x3D;10&amp;range&#x3D;10\\">8</a>
+   <a href=\\"http://localhost:3000/search?q&#x3D;nodejs&amp;page&#x3D;9&amp;per_page&#x3D;10&amp;range&#x3D;10\\">9</a>
+   <a href=\\"http://localhost:3000/search?q&#x3D;nodejs&amp;page&#x3D;10&amp;per_page&#x3D;10&amp;range&#x3D;10\\">10</a>
+   
+  <a href=\\"http://localhost:3000/search?q&#x3D;nodejs&amp;page&#x3D;2&amp;per_page&#x3D;10&amp;range&#x3D;10\\">&gt;</a>
+   
+  <a href=\\"http://localhost:3000/search?q&#x3D;nodejs&amp;page&#x3D;10&amp;per_page&#x3D;10&amp;range&#x3D;10\\">&raquo;</a>
+   
+</div>
+"
+`;
+
+exports[`Paging partial should always render with pagination model 2`] = `
+"<div class=\\"pagination\\">
+   
+  <a href=\\"http://localhost:3000/search?q&#x3D;nodejs&amp;page&#x3D;1&amp;per_page&#x3D;10&amp;range&#x3D;10\\">&laquo;</a>
+   
+  <a href=\\"http://localhost:3000/search?q&#x3D;nodejs&amp;page&#x3D;10&amp;per_page&#x3D;10&amp;range&#x3D;10\\">&lt;</a>
+    <a href=\\"http://localhost:3000/search?q&#x3D;nodejs&amp;page&#x3D;2&amp;per_page&#x3D;10&amp;range&#x3D;10\\">2</a>
+   <a href=\\"http://localhost:3000/search?q&#x3D;nodejs&amp;page&#x3D;3&amp;per_page&#x3D;10&amp;range&#x3D;10\\">3</a>
+   <a href=\\"http://localhost:3000/search?q&#x3D;nodejs&amp;page&#x3D;4&amp;per_page&#x3D;10&amp;range&#x3D;10\\">4</a>
+   <a href=\\"http://localhost:3000/search?q&#x3D;nodejs&amp;page&#x3D;5&amp;per_page&#x3D;10&amp;range&#x3D;10\\">5</a>
+   <a href=\\"http://localhost:3000/search?q&#x3D;nodejs&amp;page&#x3D;6&amp;per_page&#x3D;10&amp;range&#x3D;10\\">6</a>
+   <a href=\\"http://localhost:3000/search?q&#x3D;nodejs&amp;page&#x3D;7&amp;per_page&#x3D;10&amp;range&#x3D;10\\">7</a>
+   <a href=\\"http://localhost:3000/search?q&#x3D;nodejs&amp;page&#x3D;8&amp;per_page&#x3D;10&amp;range&#x3D;10\\">8</a>
+   <a href=\\"http://localhost:3000/search?q&#x3D;nodejs&amp;page&#x3D;9&amp;per_page&#x3D;10&amp;range&#x3D;10\\">9</a>
+   <a href=\\"http://localhost:3000/search?q&#x3D;nodejs&amp;page&#x3D;10&amp;per_page&#x3D;10&amp;range&#x3D;10\\">10</a>
+    
+  <a href=\\"http://localhost:3000/search?q&#x3D;nodejs&amp;page&#x3D;10&amp;per_page&#x3D;10&amp;range&#x3D;10\\">&raquo;</a>
+   
+</div>
+"
+`;

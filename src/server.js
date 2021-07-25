@@ -4,7 +4,7 @@ import { configPlugin, configView } from "./config/dependency";
 import { createRoutes } from "./config/route";
 import { Logger } from "./common/logger";
 
-const logger = new Logger();
+export const logger = new Logger();
 
 export const server = Hapi.server({
   port: 3000,
@@ -16,23 +16,13 @@ server.ext("onRequest", (req, res) => {
   return res.continue;
 });
 
-server.ext("onPreResponse", (req, res) => {
-  if (req.response.isBoom) {
-    logger.log(`Response error ${req.response}`);
-  }
-  return res.continue;
-});
-
 (async () => {
-  try {
-    await server.register(configPlugin());
-    server.route(createRoutes());
-    server.views(configView());
+  await server.register(configPlugin());
 
-    await server.start();
+  server.route(createRoutes());
+  server.views(configView());
 
-    logger.info(`Server running on ${server.info.uri}`);
-  } catch (err) {
-    logger.error(err);
-  }
+  await server.start();
+
+  logger.info(`Server running on ${server.info.uri}`);
 })();

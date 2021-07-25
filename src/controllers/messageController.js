@@ -1,7 +1,7 @@
 export class MessageController {
   constructor() {}
 
-  messageHandler = (req, h) => {
+  messageHandler = (req, _) => {
     const { payload } = req;
     const items = Object.values(payload).reduce(
       (acc, current) => acc.concat(...current),

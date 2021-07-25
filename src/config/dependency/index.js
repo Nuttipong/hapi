@@ -10,7 +10,6 @@ export const configPlugin = () => {
     Vision,
     Inert,
     {
-      basePath: "/v1/",
       plugin: HapiSwagger,
       options: {
         info: {

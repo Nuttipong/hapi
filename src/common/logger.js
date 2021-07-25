@@ -8,6 +8,7 @@ export class ConsoleLogger {
   log(data) {}
   info(data) {}
   error(data) {}
+  table(data) {}
 }
 
 export class Logger extends ConsoleLogger {
@@ -29,5 +30,9 @@ export class Logger extends ConsoleLogger {
 
   error(data) {
     console.error(data);
+  }
+
+  table(data) {
+    console.table(data);
   }
 }

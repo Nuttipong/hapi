@@ -10,8 +10,13 @@ Building Web Applications with hapi
    - Apply CQRS principle
    - Apply Resilience principle
    - Apply Design pattern
-3. Setup unit test
-4. Tooling
+3. Setup cross-cutting concern
+   - Circuit Breaker
+   - Logger
+   - Paging
+   - Sanitizer
+4. Setup Jest unit test
+5. Setup Tooling
    - Swagger
 
 ## Node version v14.15.5
@@ -39,5 +44,30 @@ Building Web Applications with hapi
 ## How to run test
 
 ```
-> npm run test
+> npm test
+> npm run test-coverage
+> npm run test-snapshot
+```
+
+![](doc/screen-shot.png)
+
+## How to see document Api specification
+
+```
+http://localhost:3000/documentation
+```
+
+## How to execute
+
+Install plugin REST Client
+Go to file `request.rest` at root folder
+
+```
+GET http://localhost:3000/search?text=nodejs&perPage=10&page=1&range=10
+###
+POST http://localhost:3000/api/messages HTTP/1.1
+Content-Type: application/json
+
+< ./mock.json
+###
 ```

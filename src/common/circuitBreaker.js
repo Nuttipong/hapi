@@ -78,7 +78,7 @@ export class CirCuitBreaker {
   }
 
   log(result) {
-    console.table({
+    this.logger.table({
       Result: result,
       Timestamp: Date.now(),
       Successes: this.successCount,
